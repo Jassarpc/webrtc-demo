@@ -1,6 +1,10 @@
 var http = require('http');
 var express = require('express');
 var app  = express();
+var fs = require('fs');
+var cors = require('cors');
+
+const port = process.env.PORT || 3000;
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -67,4 +71,4 @@ io.sockets.on('connection', function (socket){
 });
 
 
-server.listen(8973);
+server.listen(port);
