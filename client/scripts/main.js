@@ -9,7 +9,7 @@ var urlInput = document.getElementById('url-input');
 
 // connect to signaling server over socket.io.
 // update ip address to where socket.io server is hosted on
-var socket = io.connect('127.0.0.1:8973');
+var socket = io.connect('mikoragna.herokuapp.com:3000');
 
 socket.on('connect', function() {
   console.log('connected to socket.io');
